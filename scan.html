@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scan Tugu Pahlawan — Jelajah Surabaya</title>
+
+    <link rel="stylesheet" href="scan.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="scan-page">
+
+    <!-- NAVBAR -->
+    <header class="scan-navbar">
+
+        <a href="tugu-pahlawan.html" class="scan-logo">
+            Jelajah Surabaya
+        </a>
+
+        <a href="tugu-pahlawan.html" class="back-link">
+            ← Tugu Pahlawan
+        </a>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <main class="scan-content">
+
+        <div class="scan-heading">
+
+            <p class="section-label">JELAJAHI TUGU PAHLAWAN</p>
+
+            <h1>
+                Arahkan kamera<br>
+                ke penanda.
+            </h1>
+
+            <p>
+                Pastikan penanda Tugu Pahlawan terlihat
+                jelas di dalam kamera, kemudian tekan
+                tombol scan.
+            </p>
+
+        </div>
+
+
+        <!-- CAMERA -->
+        <section class="camera-section">
+
+            <div class="camera-box">
+
+                <video id="camera" autoplay playsinline></video>
+
+                <div class="camera-overlay">
+
+                    <div class="scan-frame">
+
+                        <span class="corner top-left"></span>
+                        <span class="corner top-right"></span>
+                        <span class="corner bottom-left"></span>
+                        <span class="corner bottom-right"></span>
+
+                    </div>
+
+                </div>
+
+                <div id="cameraMessage" class="camera-message">
+                    Mengaktifkan kamera...
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+            <button id="scanButton" class="scan-button">
+                <span class="scan-icon">⌾</span>
+                Scan Sekarang
+            </button>
+
+
+            <!-- RESULT -->
+            <div id="scanResult" class="scan-result">
+
+                <div class="result-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <span>SCAN BERHASIL</span>
+
+                    <h2>
+                        Tugu Pahlawan ditemukan!
+                    </h2>
+
+                    <p>
+                        Kamu siap melanjutkan perjalanan
+                        untuk mengenal sejarah Tugu Pahlawan.
+                    </p>
+                </div>
+
+                <a href="materi-tugu-pahlawan.html" class="result-button">
+                    Lanjut ke Materi →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+<!-- =========================
+     MODAL HASIL SCAN / AR
+========================= -->
+
+<div id="arModal" class="ar-modal">
+
+    <div class="ar-modal-box">
+
+        <button id="closeArModal" class="close-ar">
+            ×
+        </button>
+
+
+        <div class="ar-modal-header">
+
+            <p class="section-label">
+                AR BERHASIL
+            </p>
+
+            <h2>
+                Tugu Pahlawan ditemukan!
+            </h2>
+
+            <p>
+                Yuk, amati model 3D Tugu Pahlawan
+                sebelum melanjutkan ke materi.
+            </p>
+
+        </div>
+
+
+        <!-- MODEL 3D -->
+        <div class="ar-model">
+
+            <div class="sketchfab-embed-wrapper">
+
+                <iframe
+                    title="Monumen Tugu Pahlawan Dan Museum 10 November"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/579a8c8fed9e4b4294cf831c47aed1bb/embed">
+                </iframe>
+
+            </div>
+
+        </div>
+
+
+        <!-- MODAL FOOTER -->
+        <div class="ar-modal-footer">
+
+            <p>
+                Putar dan perbesar model untuk mengamatinya.
+            </p>
+
+            <a
+                href="materi-tugu-pahlawan.html"
+                class="continue-button">
+                Lanjut ke Materi →
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="scan.js"></script>
+
+</body>
+</html>

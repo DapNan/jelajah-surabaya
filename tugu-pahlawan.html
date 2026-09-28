@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tugu Pahlawan — Jelajah Surabaya</title>
+
+    <link rel="stylesheet"
+          href="tugu-pahlawan.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+
+<body>
+
+<div class="monument-page">
+
+
+    <!-- NAVBAR -->
+
+    <header class="monument-navbar">
+
+        <a href="home.html"
+           class="monument-logo">
+            Jelajah Surabaya
+        </a>
+
+
+        <div class="monument-nav-right">
+
+            <a href="tempat-bersejarah.html"
+               class="back-link">
+                ← Tempat Bersejarah
+            </a>
+
+
+            <div class="profile-menu">
+
+                <button class="avatar-button"
+                        id="avatarButton">
+
+                    <img src="assets/profil.jpg"
+                         alt="Avatar">
+
+                </button>
+
+
+                <div class="profile-dropdown"
+                     id="profileDropdown">
+
+                    <div class="profile-info">
+
+                        <img src="assets/profil.jpg"
+                             alt="Avatar">
+
+                        <div>
+                            <strong>Pengguna</strong>
+                            <small>Selamat menjelajah!</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dropdown-divider"></div>
+
+                    <a href="#">Profil</a>
+
+                    <a href="#">Pengaturan</a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a href="index.html"
+                       class="logout">
+                        Keluar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main class="monument-content">
+
+
+        <!-- HERO -->
+
+        <section class="monument-hero">
+
+            <img src="assets/tugu-pahlawan.jpeg"
+                 alt="Tugu Pahlawan">
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-text">
+
+                <p>
+                    TEMPAT BERSEJARAH
+                </p>
+
+                <h1>
+                    Tugu<br>
+                    Pahlawan
+                </h1>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INFORMATION -->
+
+        <section class="monument-info">
+
+
+            <div class="info-intro">
+
+                <p class="section-label">
+                    MENGENAL TEMPAT
+                </p>
+
+                <h2>
+                    Mengenal Tugu Pahlawan
+                </h2>
+
+            </div>
+
+
+            <div class="info-content">
+
+                <p>
+                    Tugu Pahlawan adalah sebuah monumen yang menjadi markah tanah Kota Surabaya. Tinggi monumen ini adalah 41,15 meter dan berbentuk lingga atau paku terbalik. Tubuh monumen berbentuk lengkungan-lengkungan (canalures) sebanyak 10 lengkungan, dan terbagi atas 11 ruas. Tinggi, ruas dan canalures mengandung makna tanggal 10, bulan 11, tahun 1945. Suatu tanggal bersejarah, bukan hanya bagi penduduk Kota Surabaya, tetapi juga bagi seluruh Rakyat Indonesia. Tugu Pahlawan dibangun untuk memperingati peristiwa Pertempuran 10 November 1945 di Surabaya, di mana arek-arek Suroboyo berjuang melawan pasukan Sekutu bersama Belanda yang hendak menjajah kembali Indonesia. Monumen Tugu Pahlawan menjadi pusat perhatian setiap tanggal 10 November mengenang peristiwa pada tahun 1945 ketika banyak pahlawan yang gugur dalam perang kemerdekaan.
+                </p>
+
+                <p>
+                    Melalui tempat ini, kamu dapat mengenal
+                    lebih dekat berbagai cerita dan peristiwa
+                    sejarah yang menjadi bagian dari perjalanan
+                    Kota Surabaya.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SCAN CTA -->
+
+        <section class="scan-cta">
+
+            <div class="scan-cta-text">
+
+                <p class="section-label">
+                    SIAP MENJELAJAHI?
+                </p>
+
+                <h2>
+                    Temukan lebih banyak
+                    tentang Tugu Pahlawan.
+                </h2>
+
+                <p>
+                    Arahkan kamera ke penanda yang tersedia
+                    untuk membuka pengalaman pembelajaran.
+                </p>
+
+            </div>
+
+
+            <a href="scan.html"
+               class="scan-button">
+
+                Mulai Scan
+
+                <span>→</span>
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<script>
+
+const avatarButton =
+    document.getElementById("avatarButton");
+
+const profileDropdown =
+    document.getElementById("profileDropdown");
+
+
+avatarButton.addEventListener("click", function(event) {
+
+    event.stopPropagation();
+
+    profileDropdown.classList.toggle("show");
+
+});
+
+
+document.addEventListener("click", function() {
+
+    profileDropdown.classList.remove("show");
+
+});
+
+</script>
+
+</body>
+</html>

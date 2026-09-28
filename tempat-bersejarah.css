@@ -1,0 +1,634 @@
+/* =================================
+   GENERAL
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #f6f3ea;
+
+    color: #172b3a;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+/* =================================
+   PAGE
+================================= */
+
+.history-page {
+    min-height: 100vh;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.history-navbar {
+    height: 78px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: rgba(255,255,255,0.96);
+
+    border-bottom: 1px solid #e6e2d8;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+
+    backdrop-filter: blur(12px);
+}
+
+
+.history-logo {
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: #123b5a;
+
+    text-decoration: none;
+}
+
+
+.history-nav-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.back-home {
+    color: #647682;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.back-home:hover {
+    color: #1476b8;
+}
+
+
+/* =================================
+   AVATAR
+================================= */
+
+.profile-menu {
+    position: relative;
+}
+
+
+.avatar-button {
+    width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    border: 2px solid #e2e8ed;
+
+    border-radius: 50%;
+
+    background: #eef4f6;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.avatar-button:hover {
+    transform: scale(1.05);
+
+    border-color: #1476b8;
+}
+
+.avatar-button img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =================================
+   DROPDOWN
+================================= */
+
+.profile-dropdown {
+    position: absolute;
+
+    top: 58px;
+
+    right: 0;
+
+    width: 230px;
+
+    padding: 12px;
+
+    background: white;
+
+    border: 1px solid #e5e8eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(20,45,65,0.15);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.profile-dropdown.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+.profile-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px;
+}
+
+.profile-info img {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+
+    object-fit: cover;
+}
+
+.profile-info strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.profile-info small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    color: #7a8792;
+}
+
+
+.profile-dropdown a {
+    display: block;
+
+    padding: 11px 10px;
+
+    border-radius: 10px;
+
+    color: #354656;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.2s;
+}
+
+.profile-dropdown a:hover {
+    background: #f1f6f8;
+
+    color: #1476b8;
+}
+
+.profile-dropdown .logout {
+    color: #9a5252;
+}
+
+
+.dropdown-divider {
+    height: 1px;
+
+    background: #edf0f2;
+
+    margin: 7px 0;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.history-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 75px 6% 120px;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.history-heading {
+    max-width: 750px;
+
+    margin-bottom: 90px;
+}
+
+
+.history-label {
+    margin: 0 0 12px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #6d7d88;
+}
+
+
+.history-heading h1 {
+    margin: 0;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(60px, 8vw, 95px);
+
+    line-height: 0.85;
+
+    letter-spacing: -4px;
+
+    color: #123b5a;
+}
+
+
+.history-heading h1 span {
+    color: #1476b8;
+}
+
+
+.history-description {
+    max-width: 570px;
+
+    margin-top: 30px;
+
+    color: #687985;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   PLACE SECTION
+================================= */
+
+.place-section-title {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+.place-section-title h2 {
+    margin: 0;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    color: #172b3a;
+}
+
+
+.place-count {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    color: #87939a;
+
+    letter-spacing: 1px;
+}
+
+
+/* =================================
+   PLACE GRID
+================================= */
+
+.place-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =================================
+   PLACE CARD
+================================= */
+
+.place-card {
+    min-height: 320px;
+
+    display: grid;
+
+    grid-template-columns: 43% 57%;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: white;
+
+    border: 1px solid #e6e8e6;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    box-shadow:
+        0 12px 35px rgba(20,45,65,0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* ACTIVE */
+
+.active-place:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 22px 45px rgba(20,45,65,0.14);
+}
+
+
+/* IMAGE */
+
+.place-image {
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.place-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.active-place:hover .place-image img {
+    transform: scale(1.06);
+}
+
+
+/* CONTENT */
+
+.place-content {
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.place-number {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #7b8a94;
+}
+
+
+.place-content h3 {
+    margin: 20px 0 12px;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+    color: #123b5a;
+}
+
+
+.place-content p {
+    margin: 0;
+
+    color: #74828b;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+.place-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    color: #1476b8;
+}
+
+
+.place-footer strong {
+    font-size: 19px;
+}
+
+
+/* =================================
+   DISABLED
+================================= */
+
+.disabled-place {
+    opacity: 0.68;
+
+    filter: saturate(0.6);
+
+    cursor: default;
+}
+
+.disabled-place:hover {
+    transform: none;
+
+    box-shadow:
+        0 12px 35px rgba(20,45,65,0.06);
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 850px) {
+
+    .history-content {
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+
+    .place-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .history-navbar {
+        height: 68px;
+
+        padding: 0 18px;
+    }
+
+
+    .history-logo {
+        font-size: 20px;
+    }
+
+
+    .back-home {
+        display: none;
+    }
+
+
+    .avatar-button {
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    .history-content {
+        padding: 50px 16px 90px;
+    }
+
+
+    .history-heading {
+        margin-bottom: 60px;
+    }
+
+
+    .history-heading h1 {
+        font-size: 58px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .history-description {
+        font-size: 13px;
+    }
+
+
+    .place-section-title {
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .place-section-title h2 {
+        font-size: 32px;
+    }
+
+
+    .place-card {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+
+    .place-image {
+        height: 220px;
+    }
+
+
+    .place-content {
+        padding: 25px;
+    }
+
+}

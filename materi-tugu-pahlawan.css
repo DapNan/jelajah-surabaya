@@ -1,0 +1,609 @@
+/* =========================
+   DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f6f3ea;
+    color: #17251f;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.materi-navbar {
+    height: 78px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e7e1d5;
+}
+
+.materi-logo {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #123b5a;
+}
+
+.back-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #5d6b73;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.materi-content {
+    width: min(1050px, 88%);
+    margin: auto;
+
+    padding: 75px 0 110px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.materi-header {
+    max-width: 720px;
+    margin-bottom: 70px;
+}
+
+.section-label {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #1476b8;
+}
+
+.materi-header h1 {
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: .9;
+
+    color: #123b5a;
+
+    margin-bottom: 25px;
+}
+
+.materi-header > p:last-child {
+    max-width: 620px;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #66737a;
+}
+
+
+/* =========================
+   AUDIO
+========================= */
+
+.audio-section {
+    margin-bottom: 100px;
+}
+
+.audio-text {
+    margin-bottom: 25px;
+}
+
+.audio-text h2,
+.reading-heading h2,
+.activity-heading h2 {
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 38px;
+    line-height: 1;
+
+    color: #123b5a;
+
+    margin-bottom: 12px;
+}
+
+.audio-text p:last-child,
+.activity-heading p:last-child {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #66737a;
+}
+
+
+/* AUDIO PLAYER */
+
+.audio-player {
+    position: relative;
+
+    min-height: 110px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #123b5a;
+
+    border-radius: 22px;
+
+    color: #ffffff;
+}
+
+
+/* PLAY */
+
+.play-button {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f4c95d;
+    color: #123b5a;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* AUDIO INFO */
+
+.audio-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    min-width: 190px;
+}
+
+.audio-info strong {
+    font-size: 14px;
+}
+
+.audio-info span {
+    font-size: 11px;
+    color: #c8d6de;
+}
+
+
+/* AUDIO LINE */
+
+.audio-line {
+    flex: 1;
+
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.25);
+}
+
+.audio-line span {
+    display: block;
+
+    width: 0%;
+    height: 100%;
+
+    background: #f4c95d;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   BACAAN
+========================= */
+
+.reading-section {
+    margin-bottom: 100px;
+}
+
+.reading-heading {
+    margin-bottom: 30px;
+}
+
+.reading-card {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(18,59,90,.08);
+}
+
+.reading-card img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 430px;
+
+    object-fit: cover;
+}
+
+.reading-text {
+    padding: 45px;
+}
+
+.reading-text p {
+    font-size: 15px;
+    line-height: 1.9;
+
+    color: #56636b;
+
+    margin-bottom: 22px;
+}
+
+.reading-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   AKTIVITAS
+========================= */
+
+.activity-section {
+    padding-top: 20px;
+}
+
+.activity-heading {
+    margin-bottom: 30px;
+}
+
+.question-card {
+    padding: 40px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(18,59,90,.08);
+}
+
+.question-number {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    color: #1476b8;
+}
+
+.question-card h3 {
+    max-width: 700px;
+
+    margin: 15px 0 30px;
+
+    font-family: "Baloo 2", sans-serif;
+    font-size: 30px;
+    line-height: 1.15;
+
+    color: #123b5a;
+}
+
+
+/* ANSWERS */
+
+.answer-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.answer {
+    padding: 17px 20px;
+
+    border: 1px solid #ddd8cd;
+    border-radius: 13px;
+
+    background: #faf8f3;
+
+    text-align: left;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #3e4b52;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.answer:hover {
+    border-color: #1476b8;
+    background: #f1f7fa;
+}
+
+.answer.correct {
+    border-color: #5b9d6c;
+    background: #e8f5eb;
+    color: #286438;
+}
+
+.answer.wrong {
+    border-color: #d47b72;
+    background: #fff0ee;
+    color: #9a4037;
+}
+
+
+/* FEEDBACK */
+
+.answer-feedback {
+    display: none;
+
+    margin-top: 20px;
+    padding: 15px 18px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.answer-feedback.show {
+    display: block;
+}
+
+.answer-feedback.correct-feedback {
+    background: #e8f5eb;
+    color: #286438;
+}
+
+.answer-feedback.wrong-feedback {
+    background: #fff0ee;
+    color: #9a4037;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .materi-navbar {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .materi-logo {
+        font-size: 21px;
+    }
+
+    .back-link {
+        font-size: 12px;
+    }
+
+    .materi-content {
+        width: 92%;
+        padding: 50px 0 80px;
+    }
+
+    .materi-header {
+        margin-bottom: 55px;
+    }
+
+    .materi-header h1 {
+        font-size: 58px;
+    }
+
+    .audio-text h2,
+    .reading-heading h2,
+    .activity-heading h2 {
+        font-size: 32px;
+    }
+
+    .audio-player {
+        flex-wrap: wrap;
+    }
+
+    .audio-line {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .reading-card {
+        grid-template-columns: 1fr;
+    }
+
+    .reading-card img {
+        min-height: 280px;
+        max-height: 350px;
+    }
+
+    .reading-text {
+        padding: 30px;
+    }
+
+    .answer-list {
+        grid-template-columns: 1fr;
+    }
+
+    .question-card {
+        padding: 28px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .materi-navbar {
+        padding: 0 16px;
+    }
+
+    .materi-logo {
+        font-size: 19px;
+    }
+
+    .back-link {
+        font-size: 10px;
+    }
+
+    .materi-header h1 {
+        font-size: 46px;
+    }
+
+    .materi-header > p:last-child {
+        font-size: 13px;
+    }
+
+    .audio-text h2,
+    .reading-heading h2,
+    .activity-heading h2 {
+        font-size: 28px;
+    }
+
+    .audio-player {
+        padding: 20px;
+    }
+
+    .audio-info {
+        min-width: 0;
+    }
+
+    .reading-text {
+        padding: 25px;
+    }
+
+    .reading-text p {
+        font-size: 14px;
+    }
+
+    .question-card {
+        padding: 22px;
+    }
+
+    .question-card h3 {
+        font-size: 25px;
+    }
+}
+/* =========================
+   3D MODEL
+========================= */
+
+.model-section {
+    margin-bottom: 100px;
+}
+
+.model-heading {
+    margin-bottom: 30px;
+}
+
+.model-heading h2 {
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 38px;
+    line-height: 1;
+
+    color: #123b5a;
+
+    margin-bottom: 12px;
+}
+
+.model-heading p:last-child {
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #66737a;
+}
+
+
+/* SKETCHFAB */
+
+.sketchfab-embed-wrapper {
+    width: 100%;
+    height: 560px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: #17251f;
+
+    box-shadow: 0 15px 40px rgba(18, 59, 90, 0.12);
+}
+
+.sketchfab-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: none;
+}
+
+
+/* =========================
+   RESPONSIVE 3D
+========================= */
+
+@media (max-width: 800px) {
+
+    .model-section {
+        margin-bottom: 70px;
+    }
+
+    .model-heading h2 {
+        font-size: 32px;
+    }
+
+    .sketchfab-embed-wrapper {
+        height: 450px;
+
+        border-radius: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .model-heading h2 {
+        font-size: 28px;
+    }
+
+    .model-heading p:last-child {
+        font-size: 13px;
+    }
+
+    .sketchfab-embed-wrapper {
+        height: 390px;
+
+        border-radius: 18px;
+    }
+}

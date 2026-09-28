@@ -1,0 +1,971 @@
+/* =================================
+   GENERAL
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #f6f3ea;
+    color: #172b3a;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+/* =================================
+   HOME
+================================= */
+
+.home-page {
+    min-height: 100vh;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.home-navbar {
+    height: 78px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #e6e2d8;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 50;
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* LOGO */
+
+.home-logo {
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    color: #123b5a;
+}
+
+
+/* =================================
+   AVATAR
+================================= */
+
+.profile-menu {
+    position: relative;
+}
+
+.avatar-button {
+    width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    border: 2px solid #e2e8ed;
+
+    border-radius: 50%;
+
+    background: #eef4f6;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.avatar-button:hover {
+    transform: scale(1.05);
+    border-color: #1476b8;
+}
+
+.avatar-button img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =================================
+   DROPDOWN
+================================= */
+
+.profile-dropdown {
+    position: absolute;
+
+    top: 58px;
+    right: 0;
+
+    width: 230px;
+
+    padding: 12px;
+
+    background: white;
+
+    border: 1px solid #e5e8eb;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(20, 45, 65, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.profile-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* PROFILE INFO */
+
+.profile-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px;
+}
+
+.profile-info img {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+
+    object-fit: cover;
+}
+
+.profile-info strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.profile-info small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    color: #7a8792;
+}
+
+
+/* DROPDOWN LINK */
+
+.profile-dropdown a {
+    display: block;
+
+    padding: 11px 10px;
+
+    border-radius: 10px;
+
+    color: #354656;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.2s ease;
+}
+
+.profile-dropdown a:hover {
+    background: #f1f6f8;
+
+    color: #1476b8;
+}
+
+.profile-dropdown .logout {
+    color: #9a5252;
+}
+
+.dropdown-divider {
+    height: 1px;
+
+    background: #edf0f2;
+
+    margin: 7px 0;
+}
+
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.home-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 6% 120px;
+}
+
+
+/* =================================
+   WELCOME
+================================= */
+
+.home-welcome {
+    padding: 20px 0 80px;
+}
+
+.home-label {
+    margin: 0 0 12px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #6d7d88;
+}
+
+.home-welcome h1 {
+    margin: 0;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+
+    color: #123b5a;
+}
+
+.home-welcome h1 span {
+    color: #1476b8;
+}
+
+.welcome-description {
+    max-width: 570px;
+
+    margin-top: 28px;
+
+    color: #687985;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   SECTION TITLE
+================================= */
+
+.explore-section {
+    padding-top: 20px;
+}
+
+.section-title {
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    color: #172b3a;
+}
+
+
+/* =================================
+   CATEGORY GRID
+================================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =================================
+   CATEGORY CARD
+================================= */
+
+.category-card {
+    min-height: 330px;
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: white;
+
+    border: 1px solid #e6e8e6;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    box-shadow: 0 12px 35px rgba(20, 45, 65, 0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* ACTIVE CARD */
+
+.history-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 22px 45px rgba(20, 45, 65, 0.14);
+}
+
+
+/* IMAGE */
+
+.category-image {
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.history-card:hover .category-image img {
+    transform: scale(1.06);
+}
+
+
+/* CONTENT */
+
+.category-content {
+    position: relative;
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.category-number {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #7b8a94;
+
+    letter-spacing: 1px;
+}
+
+.category-content h3 {
+    margin: 22px 0 12px;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+    color: #123b5a;
+}
+
+.category-content p {
+    margin: 0;
+
+    color: #74828b;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.category-arrow {
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    color: #1476b8;
+}
+
+
+/* =================================
+   DISABLED CATEGORY
+================================= */
+
+.disabled-card {
+    cursor: default;
+
+    opacity: 0.72;
+
+    filter: saturate(0.65);
+}
+
+.disabled-card .category-image {
+    filter: grayscale(15%);
+}
+
+.disabled-card:hover {
+    transform: none;
+
+    box-shadow:
+        0 12px 35px rgba(20, 45, 65, 0.06);
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 800px) {
+
+    .home-navbar {
+        height: 68px;
+
+        padding: 0 20px;
+    }
+
+    .home-logo {
+        font-size: 21px;
+    }
+
+    .home-content {
+        padding: 55px 20px 90px;
+    }
+
+    .home-welcome {
+        padding-bottom: 55px;
+    }
+
+    .home-welcome h1 {
+        font-size: 60px;
+    }
+
+    .welcome-description {
+        font-size: 13px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+.home-slider {
+    min-height: 600px;
+}
+
+.home-slide {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.75fr;
+}
+
+.slide-content {
+    padding: 35px 28px;
+}
+
+.slide-content h1 {
+    font-size: 48px;
+}
+
+.slide-content .welcome-description {
+    font-size: 12px;
+}
+
+.slide-image {
+    min-height: 220px;
+}
+
+.slider-prev {
+    left: 12px;
+}
+
+.slider-next {
+    right: 12px;
+}
+
+.slider-indicator {
+    left: 28px;
+    bottom: 18px;
+}
+}
+
+
+@media (max-width: 520px) {
+
+    .category-card {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+    .category-image {
+        height: 210px;
+    }
+
+    .category-content {
+        padding: 25px;
+    }
+
+}
+/* =================================
+   HOME SLIDER
+================================= */
+
+.home-slider {
+    position: relative;
+
+    min-height: 430px;
+
+    margin-bottom: 80px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    background: #123b5a;
+
+    box-shadow:
+        0 20px 50px rgba(20, 45, 65, 0.12);
+}
+
+
+/* SLIDE */
+
+.home-slide {
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: stretch;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        visibility 0.5s ease;
+}
+
+.home-slide.active {
+    position: relative;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+}
+
+
+/* =================================
+   SLIDE CONTENT
+================================= */
+
+.slide-content {
+    padding: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: white;
+}
+
+.slide-content .home-label {
+    color: #b8dce8;
+
+    opacity: 1;
+}
+
+.slide-content h1 {
+    margin: 0;
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(48px, 5vw, 72px);
+
+    line-height: 0.92;
+
+    letter-spacing: -2px;
+}
+
+.slide-content h1 span {
+    color: #75d1e3;
+}
+
+.slide-content .welcome-description {
+    max-width: 480px;
+
+    margin-top: 25px;
+
+    color: rgba(255,255,255,0.78);
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   SLIDE IMAGE
+================================= */
+
+.slide-image {
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.slide-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.8s ease;
+}
+
+.home-slide.active .slide-image img {
+    transform: scale(1.02);
+}
+
+
+/* =================================
+   SLIDER BUTTON
+================================= */
+
+.slider-button {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    background: rgba(255,255,255,0.15);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    backdrop-filter: blur(8px);
+
+    transition: 0.25s ease;
+}
+
+.slider-button:hover {
+    background: white;
+
+    color: #123b5a;
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+}
+
+.slider-prev {
+    left: 20px;
+}
+
+.slider-next {
+    right: 20px;
+}
+
+
+/* =================================
+   INDICATOR
+================================= */
+
+.slider-indicator {
+    position: absolute;
+
+    bottom: 22px;
+
+    left: 55px;
+
+    display: flex;
+
+    gap: 7px;
+
+    z-index: 10;
+}
+
+.indicator {
+    width: 8px;
+
+    height: 8px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.45);
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.indicator.active {
+    width: 25px;
+
+    border-radius: 10px;
+
+    background: white;
+}
+
+/* KHUSUS SLIDE 1 */
+.home-slide:first-child .slide-content {
+    padding-top: 140px;
+}
+/* =================================
+   RESPONSIVE SLIDER
+================================= */
+
+@media (max-width: 900px) {
+
+    .home-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .home-slider {
+        min-height: 580px;
+    }
+
+    .home-slide {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.75fr;
+    }
+
+    .slide-content {
+        padding: 40px 45px 25px;
+    }
+
+    .slide-content h1 {
+        font-size: 52px;
+    }
+
+    .slide-content .welcome-description {
+        font-size: 13px;
+        margin-top: 18px;
+    }
+
+    .slide-image {
+        min-height: 220px;
+    }
+
+    .slider-indicator {
+        left: 45px;
+        bottom: 18px;
+    }
+
+}
+
+
+/* =================================
+   HP
+================================= */
+
+@media (max-width: 600px) {
+
+    .home-navbar {
+        height: 68px;
+        padding: 0 18px;
+    }
+
+    .home-logo {
+        font-size: 20px;
+    }
+
+    .avatar-button {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .home-content {
+        padding: 35px 16px 80px;
+    }
+
+
+    .home-slider {
+        min-height: 620px;
+
+        border-radius: 22px;
+
+        margin-bottom: 55px;
+    }
+
+
+    .home-slide {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 1fr 0.72fr;
+    }
+
+
+    .slide-content {
+        padding: 35px 28px 20px;
+
+        justify-content: center;
+    }
+
+
+    .slide-content h1 {
+        font-size: 46px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .slide-content .home-label {
+        font-size: 9px;
+    }
+
+
+    .slide-content .welcome-description {
+        font-size: 11px;
+
+        line-height: 1.6;
+
+        margin-top: 18px;
+
+        max-width: 90%;
+    }
+
+
+    .slide-image {
+        min-height: 220px;
+    }
+
+
+    .slider-button {
+        width: 38px;
+        height: 38px;
+
+        font-size: 16px;
+    }
+
+
+    .slider-prev {
+        left: 12px;
+    }
+
+
+    .slider-next {
+        right: 12px;
+    }
+
+
+    .slider-indicator {
+        left: 28px;
+        bottom: 15px;
+    }
+
+}
+
+
+/* =================================
+   HP KECIL
+================================= */
+
+@media (max-width: 400px) {
+
+    .home-slider {
+        min-height: 590px;
+    }
+
+    .slide-content {
+        padding: 30px 24px 15px;
+    }
+
+    .slide-content h1 {
+        font-size: 40px;
+    }
+
+    .slide-content .welcome-description {
+        font-size: 10px;
+    }
+
+    .slide-image {
+        min-height: 200px;
+    }
+
+}

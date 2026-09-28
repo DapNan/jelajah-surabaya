@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jelajah Surabaya</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="home-page">
+
+        <!-- NAVBAR -->
+        <header class="home-navbar">
+
+            <div class="home-logo">
+                Jelajah Surabaya
+            </div>
+
+            <!-- AVATAR -->
+            <div class="profile-menu">
+
+                <button class="avatar-button" id="avatarButton">
+                    <img src="assets/profil.jpg" alt="Avatar">
+                </button>
+
+                <!-- DROPDOWN -->
+                <div class="profile-dropdown" id="profileDropdown">
+
+                    <div class="profile-info">
+                        <img src="assets/profil.jpg" alt="Avatar">
+
+                        <div>
+                            <strong>Pengguna</strong>
+                            <small>Selamat menjelajah!</small>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a href="#">Profil</a>
+                    <a href="#">Pengaturan</a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a href="index.html" class="logout">
+                        Keluar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- MAIN -->
+        <main class="home-content">
+
+          <!-- HERO SLIDER -->
+<section class="home-slider">
+
+    <!-- SLIDE 1 -->
+    <div class="home-slide active">
+
+        <div class="slide-content">
+
+            <p class="home-label">
+                SELAMAT DATANG
+            </p>
+
+            <h1>
+                Yuk, jelajahi<br>
+                <span>Surabaya!</span>
+            </h1>
+
+            <p class="welcome-description">
+                Kenali berbagai tempat, sejarah, dan budaya
+                Surabaya melalui pengalaman belajar yang interaktif.
+            </p>
+
+        </div>
+
+        <div class="slide-image">
+            <img src="assets/slider1.jpg" alt="Surabaya">
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 2 -->
+    <div class="home-slide">
+
+        <div class="slide-content">
+
+            <p class="home-label">
+                TEMPAT BERSEJARAH
+            </p>
+
+            <h1>
+                Temukan cerita<br>
+                <span>Surabaya.</span>
+            </h1>
+
+            <p class="welcome-description">
+                Jelajahi berbagai tempat bersejarah dan
+                kenali cerita yang ada di baliknya.
+            </p>
+
+        </div>
+
+        <div class="slide-image">
+            <img src="assets/slider2.jpg" alt="Tempat Bersejarah Surabaya">
+        </div>
+
+    </div>
+
+
+    <!-- SLIDE 3 -->
+    <div class="home-slide">
+
+        <div class="slide-content">
+
+            <p class="home-label">
+                BELAJAR INTERAKTIF
+            </p>
+
+            <h1>
+                Belajar dengan<br>
+                <span>cara berbeda.</span>
+            </h1>
+
+            <p class="welcome-description">
+                Scan tempat yang kamu pilih, dengarkan audio,
+                baca informasi, dan lakukan aktivitas pembelajaran.
+            </p>
+
+        </div>
+
+        <div class="slide-image">
+            <img src="assets/slider3.jpg" alt="Belajar Interaktif">
+        </div>
+
+    </div>
+
+
+    <!-- SLIDER CONTROL -->
+    <button class="slider-button slider-prev" id="sliderPrev">
+        ←
+    </button>
+
+    <button class="slider-button slider-next" id="sliderNext">
+        →
+    </button>
+
+
+    <!-- INDICATOR -->
+    <div class="slider-indicator">
+
+        <button class="indicator active" data-slide="0"></button>
+        <button class="indicator" data-slide="1"></button>
+        <button class="indicator" data-slide="2"></button>
+
+    </div>
+
+</section>
+
+
+            <!-- CATEGORY -->
+            <section class="explore-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <p class="home-label">
+                            JELAJAHI SURABAYA
+                        </p>
+
+                        <h2>
+                            Mau menjelajahi apa?
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY GRID -->
+                <div class="category-grid">
+
+                    <!-- TEMPAT BERSEJARAH -->
+                    <a href="tempat-bersejarah.html"
+                       class="category-card history-card">
+
+                        <div class="category-image">
+                            <img src="assets/tempatbersejarah.jpg"
+                                 alt="Tempat Bersejarah Surabaya">
+                        </div>
+
+                        <div class="category-content">
+
+                            <span class="category-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Tempat Bersejarah
+                            </h3>
+
+                            <p>
+                                Kenali tempat-tempat bersejarah
+                                yang menjadi bagian dari perjalanan Surabaya.
+                            </p>
+
+                            <span class="category-arrow">
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- TRADISI -->
+                    <div class="category-card disabled-card">
+
+                        <div class="category-image">
+                            <img src="assets/tradisi.jpeg"
+                                 alt="Tradisi Surabaya">
+                        </div>
+
+                        <div class="category-content">
+
+                            <span class="category-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Tradisi
+                            </h3>
+
+                            <p>
+                                Kenali berbagai tradisi dan kebiasaan
+                                masyarakat Surabaya.
+                            </p>
+
+                            <span class="category-arrow">
+                                →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- KULINER -->
+                    <div class="category-card disabled-card">
+
+                        <div class="category-image">
+                            <img src="assets/kuliner.jpg"
+                                 alt="Kuliner Surabaya">
+                        </div>
+
+                        <div class="category-content">
+
+                            <span class="category-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Kuliner
+                            </h3>
+
+                            <p>
+                                Temukan makanan khas yang menjadi
+                                bagian dari budaya Surabaya.
+                            </p>
+
+                            <span class="category-arrow">
+                                →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUDAYA -->
+                    <div class="category-card disabled-card">
+
+                        <div class="category-image">
+                            <img src="assets/budaya.jpg"
+                                 alt="Budaya Surabaya">
+                        </div>
+
+                        <div class="category-content">
+
+                            <span class="category-number">
+                                04
+                            </span>
+
+                            <h3>
+                                Budaya
+                            </h3>
+
+                            <p>
+                                Mengenal keberagaman budaya
+                                yang ada di Surabaya.
+                            </p>
+
+                            <span class="category-arrow">
+                                →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- DROPDOWN SCRIPT -->
+    <script>
+
+        const avatarButton = document.getElementById("avatarButton");
+        const profileDropdown = document.getElementById("profileDropdown");
+
+        avatarButton.addEventListener("click", function(event) {
+
+            event.stopPropagation();
+
+            profileDropdown.classList.toggle("show");
+
+        });
+
+
+        document.addEventListener("click", function() {
+
+            profileDropdown.classList.remove("show");
+
+        });
+
+
+        const slides = document.querySelectorAll(".home-slide");
+const indicators = document.querySelectorAll(".indicator");
+
+const prevButton = document.getElementById("sliderPrev");
+const nextButton = document.getElementById("sliderNext");
+
+let currentSlide = 0;
+
+
+function showSlide(index) {
+
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+    indicators.forEach((indicator) => {
+        indicator.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+    indicators[index].classList.add("active");
+
+    currentSlide = index;
+}
+
+
+nextButton.addEventListener("click", () => {
+
+    let nextSlide = currentSlide + 1;
+
+    if (nextSlide >= slides.length) {
+        nextSlide = 0;
+    }
+
+    showSlide(nextSlide);
+
+});
+
+
+prevButton.addEventListener("click", () => {
+
+    let prevSlide = currentSlide - 1;
+
+    if (prevSlide < 0) {
+        prevSlide = slides.length - 1;
+    }
+
+    showSlide(prevSlide);
+
+});
+
+
+indicators.forEach((indicator, index) => {
+
+    indicator.addEventListener("click", () => {
+        showSlide(index);
+    });
+
+});
+    </script>
+
+</body>
+</html>
